@@ -1,0 +1,12 @@
+oid main() {
+  int somaLista(List<int> lista) {
+    int soma = 0;
+    for (int num in lista) {
+      soma += num;
+    }
+    return soma;
+  }
+
+  List<int> numeros = [2, 4, 6, 8, 10];
+  print("Soma: ${somaLista(numeros)}");
+}
