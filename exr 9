@@ -1,0 +1,16 @@
+void main() {
+  int contarPositivos(List<int> lista) {
+    int contador = 0;
+
+    for (int num in lista) {
+      if (num > 0) {
+        contador++;
+      }
+    }
+
+    return contador;
+  }
+
+  List<int> numeros = [-2, 5, 0, 8, -1, 7];
+  print("Positivos: ${contarPositivos(numeros)}");
+}
