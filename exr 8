@@ -1,0 +1,16 @@
+void main() {
+  int maiorValor(List<int> lista) {
+    int maior = lista[0];
+
+    for (int num in lista) {
+      if (num > maior) {
+        maior = num;
+      }
+    }
+
+    return maior;
+  }
+
+  List<int> numeros = [3, 9, 2, 15, 7, 20, 1, 8, 6, 4];
+  print("Maior valor: ${maiorValor(numeros)}");
+}
