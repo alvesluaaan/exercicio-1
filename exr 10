@@ -1,0 +1,31 @@
+void main() {
+  double num1 = 10;
+  double num2 = 5;
+  int opcao = 1; // 1=soma, 2=subtração, 3=multiplicação, 4=divisão
+
+  double resultado;
+
+  switch (opcao) {
+    case 1:
+      resultado = num1 + num2;
+      break;
+    case 2:
+      resultado = num1 - num2;
+      break;
+    case 3:
+      resultado = num1 * num2;
+      break;
+    case 4:
+      if (num2 == 0) {
+        print("Erro: divisão por zero!");
+        return;
+      }
+      resultado = num1 / num2;
+      break;
+    default:
+      print("Opção inválida!");
+      return;
+  }
+
+  print("Resultado: $resultado");
+}
