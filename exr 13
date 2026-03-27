@@ -1,0 +1,40 @@
+double calcularMedia(double n1, double n2) {
+  return (n1 + n2) / 2;
+}
+
+void main() {
+  List<double> nota1 = [7.0, 5.0, 8.0, 6.5, 9.0];
+  List<double> nota2 = [8.0, 6.0, 7.0, 7.0, 10.0];
+
+  List<double> medias = [];
+
+  int aprovados = 0;
+  int reprovados = 0;
+
+  for (int i = 0; i < nota1.length; i++) {
+    double media = calcularMedia(nota1[i], nota2[i]);
+    medias.add(media);
+
+    if (media >= 7) {
+      print("Aluno ${i + 1} | Média: ${media.toStringAsFixed(2)} | Aprovado");
+      aprovados++;
+    } else {
+      print("Aluno ${i + 1} | Média: ${media.toStringAsFixed(2)} | Reprovado");
+      reprovados++;
+    }
+  }
+
+  double maior = medias[0];
+  double menor = medias[0];
+
+  for (int i = 1; i < medias.length; i++) {
+    if (medias[i] > maior) maior = medias[i];
+    if (medias[i] < menor) menor = medias[i];
+  }
+
+  print("\nResumo:");
+  print("Maior média: ${maior.toStringAsFixed(2)}");
+  print("Menor média: ${menor.toStringAsFixed(2)}");
+  print("Aprovados: $aprovados");
+  print("Reprovados: $reprovados");
+}
