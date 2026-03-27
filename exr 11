@@ -1,0 +1,11 @@
+void main() {
+  String palavra = "arara";
+
+  String invertida = palavra.split('').reversed.join();
+
+  if (palavra == invertida) {
+    print("verdadeiro");
+  } else {
+    print("falso");
+  }
+}
